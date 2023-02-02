@@ -1,22 +1,27 @@
 <!DOCTYPE html>
 <html>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@1,100&display=swap" rel="stylesheet">
     <head>
         <title>CSS conflicts</title>
         <style>
             * { font-family: Arial, Verdana, sans-serif; }
-            h1 { font-family: "Courier New", monospace; }
-            i { color: green; }
-            i { color: red; }
-            b { color: pink; }
-            p b { color: blue; }
-            #intro { font-size: 100%; }
-            p { font-size: 75%; }
+            h1 { font-family: 'Raleway', sans-serif; }
+            h1 i { font-family: 'Raleway', sans-serif; color: darkseagreen; }
+            i { color: mediumpurple; }
+            h2 b { color: pink; }
+            p b { color: skyblue; }
+            #intro { font-size: 120%; }
+            p { font-size: 80%; }
         </style>
     </head>
     <body>
         <h1>This is a first-level heading</h1>
-        <p id="intro">This is the <i>introduction</i> paragraph. It has an <b>'id' attribute with the value of "intro"</b>. It is styled differently from all other paragraphs, using a CSS rule with an <i>ID Selector</i>.</p>
+        <p id="intro">This is the <i>introduction</i> paragraph. It has an <b>'id' attribute with the value of "intro"</b>. It is styled <b>differently</b> from all other paragraphs, using a CSS rule with an <i>ID Selector</i>.</p>
         <p>This is the <i>second</i> paragraph. It <b>does not</b> have an 'id' attribute.</p>
         <p>This is the <i>third</i> paragraph. It <b>also does not</b> have an 'id' attribute.</p>
+        <h2><b>mlem</b></h2>
+        <h1><i>This is the end of the example.</i></h1>
     </body>
 </html>
