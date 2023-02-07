@@ -2,43 +2,72 @@
 <html>
 <body>
 
-    <h2>JavaScript Flow Controls</h2>
+    <h2>JavaScript Functions</h2>
 
-    <p id="happy day"></p>
-    <p id="good_night"></p>
-    <p id="good_all"></p>
+    <p id="multiply"></p>
+    <p id="greet"></p>
+    <p id="f2c"></p>
+    <p id="method"></p>
+    <p id="method1"></p>
+    <p id="len1"></p>
+    <p id="len2"></p>
+    <p id="pop_method"></p>
+    <p id="push_method"></p>
 
 
 
     <script>
         
-        var hour= new Date().getHours() //returns the hour (0 to 23) of the current time.
-        var greeting ; 
+        function multiply(p1, p2) {
+            return p1 * p2;
+        };
         
-        if (hour < 18) {
-            greeting = "happy day!";
-        }
-        document.getElementById("happy day").innerHTML = greeting;
+        document.getElementById("multiply").innerHTML = "This is result of multiply function: "+ multiply(417, 162);
+        // change the parameters and check ..
         
-        if (hour < 16) {// change the hour values based on the current time.
-            greeting = "happy day!";
-        } else {
-            greeting = "Goodnight!";
-        }
-        document.getElementById("good_night").innerHTML = greeting;
+        // create a function to return square root of a number ..
         
-        if (hour < 9) {
-            greeting = "Go back to bed! It's too early!";
-        } else if (hour <12){
-            greeting = "Good Morning!"; 
-        } else if (hour <18){
-            greeting = "Good Afternoon!";
-        } else {
-            greeting = "Goodnight!";
-        }
-        document.getElementById("good_all").innerHTML = greeting;
+
+        
+        function greeting() {
+            return ("Hello!");
+        };
+        
+        document.getElementById("greet").innerHTML = "What do I say when I greet someone: "+ greeting();
         
         
+        
+        function to_Celsius(f) {
+            return (5/9) * (f-32);
+        };
+        
+        document.getElementById("f2c").innerHTML = "Today's temperature in Celsius is: " + to_Celsius(50);
+        
+        
+        
+        var person = {
+            firstName: "Zach",
+            lastName: "Carlos",
+            age: 22,
+            eyeColor: "brown",
+            fullName: function() {return this.firstName + " " + this.lastName;}
+        };
+        document.getElementById("method").innerHTML = person.fullName();
+        document.getElementById("method1").innerHTML = person.fullName().toLowerCase() + " loved to play video games.";
+        
+        
+        var a = [1, 7, 15, 16, 7, 9, [3, 4, 5]];
+        document.getElementById("len1").innerHTML = "The length of the variable is: " + a.length;
+        document.getElementById("len2").innerHTML = "The length of the 6th element is: " + a[6].length;  
+        
+        
+        var midwest = ["Wisconsin", "New York", "Stoughton", "Illinois"];
+        midwest.pop();
+        document.getElementById("pop_method").innerHTML = midwest; //removes the last element
+        midwest.push("Michigan");
+        document.getElementById("push_method").innerHTML = midwest;// adds michigan at the end
+        
+
 
     
 
