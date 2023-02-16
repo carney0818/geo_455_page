@@ -4,6 +4,10 @@
 
 <h2>JavaScript HTML Events</h2>
     
+    <h3>What is this Exercise focusing on?</h3>
+    <button id="myBtn4">Click for answer!</button>
+    <p id="demo4"></p>
+    
     
     <h3>What can JavaScript do?</h3>
     <button id="myBtn1">Click me!!</button>
@@ -51,16 +55,22 @@
     
     
     function myFunction(){
-        document.getElementById("demo3").innerHTML += "Moused over!<br>";
+        document.getElementById("demo3").innerHTML += "Hi!<br>";
     }
     
     function mySecondFunction() {
-        document.getElementById("demo3").innerHTML += "Clicked!<br>";
+        document.getElementById("demo3").innerHTML += "Excuse you!<br>";
     }
     
     function myThirdFunction() {
-        document.getElementById("demo3").innerHTML += "Moused out!<br>";
+        document.getElementById("demo3").innerHTML += "Bye!<br>";
     }
+    document.getElementById("myBtn4").addEventListener("click", hello);
+    
+    function hello() {
+        document.getElementById("demo4").innerHTML = 
+            "JavaScript! :)))))";
+            }
     
     
 </script>
