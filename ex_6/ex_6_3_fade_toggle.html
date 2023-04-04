@@ -17,12 +17,14 @@
 
       <script>
           
-       $(document).ready(function() {
-              $("img").click(function(){
-                  $(this).hide();
+        $(document).ready(function() {
+              $("#button").click(function(){
+                  $("#normal").fadeToggle();
+                  $("#fast").fadeToggle("fast");
+                  $("#slow").fadeToggle("slow");
+                  $("#very-slow").fadeToggle(2000);
               });
-          });
-          // add function for show
+        });
 
       </script>
 
@@ -31,12 +33,12 @@
        <h1> Adventures of Tintin </h1>
        <p> Main Characters </p>
        <div class= "charac">
-           <img src="img/tintin-milou.jpg">
-           <img src="img/captain-haddock_v2.jpg">
-           <img src="img/prof_calcu.jpg">
-           <img src="img/Thomson_&_Thompson.png">
+           <img class="normal" src="img/tintin-milou.jpg">
+           <img class="fast" src="img/captain-haddock_v2.jpg">
+           <img class="slow" src="img/prof_calcu.jpg">
+           <img class="very-slow" src="img/Thomson_&_Thompson.png">
        </div>
        <!-- add show button -->
-
+       <button>Fade Toggle</button>
    </body>
 </html>
