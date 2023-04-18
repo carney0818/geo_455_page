@@ -75,11 +75,11 @@ L.geoJSON(targetPoint, {
 L.geoJSON(nearest, {
     pointToLayer: function(feature,latlng){
       return L.circleMarker(latlng,{
-          radius: 20,
+          radius: 300,
           stroke: true,
           color: 'red',
           opacity: 1,
-          weight: 2,
+          weight: 4,
           fill: false,
       });
     }}).addTo(mymap);
