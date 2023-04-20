@@ -11,30 +11,29 @@ var grayscale = L.tileLayer('https://cartodb-basemaps-{s}.global.ssl.fastly.net/
 
 var migrationLayer = new L.migrationLayer({
     map: mymap,
-    data: dataset,
+    data: data,
     pulseRadius:30,
     pulseBorderWidth:3,
     arcWidth:1,
     arcLabel:true,
     arcLabelFont:'10px sans-serif',
-    maxWidth:10,
+    maxWidth:10
 });
 
-migrationLayer.addTo(mymap)
+migrationLayer.addTo(mymap);  
 
-dane_geojson2
-    
-$(document).ready(function() {
-    $("#btn1").click(function(){
-        migrationLayer.hide();
-    });
-    $("#btn2").click(function(){
-        migrationLayer.show();
-    });
-    $("#btn3").click(function(){
-        migrationLayer.pause();
-    });
-    $("#btn4").click(function(){
-        migrationLayer.play();
-    });
-});
+var dane_poly = new L.geoJson(dane_poly).addTo(mymap);
+
+function hide(){
+    migrationLayer.hide();
+}
+function show(){
+    migrationLayer.show();
+}
+function play(){
+    migrationLayer.play();
+}
+function pause(){
+    migrationLayer.pause();
+}
+  
