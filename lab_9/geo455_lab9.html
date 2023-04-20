@@ -20,8 +20,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:wght@100&display=swap" rel="stylesheet">
     
     <!-- Load data and script -->
-    <script src="daneagain.js"></script>
     <script src="https://lycheelin.github.io/leaflet.migrationLayer/src/src.js"></script>
+    <script src="daneagain.js"></script>
+    <script src="dane_poly.js"></script>
+    
     
     <style>
         #container {
@@ -71,10 +73,10 @@
     <div id= "container">
         <div id = "header">
             <h1 align="center">Lab 9: Commute Flow Map to Dane County (2011-2015)</h1>
-            <button id="btn1" type="button" >Hide</button>
-            <button id="btn2" type="button" >Show</button>
-            <button id="btn3" type="button" >Pause</button>
-            <button id="btn4" type="button" >Play</button>
+            <button type="button" value="hide" class="btn" onclick="hide()" >Hide</button>
+            <button type="button" value="show" class="btn" onclick="show()" >Show</button>
+            <button type="button" value="play" class="btn" onclick="pause()" >Pause</button>
+            <button type="button" value="pause" class="btn" onclick="play()" >Play</button>
         </div>
         <div id="map"></div>
         <script src="map_lab9.js"></script>
