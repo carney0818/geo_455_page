@@ -9,18 +9,20 @@ var grayscale = L.tileLayer('https://cartodb-basemaps-{s}.global.ssl.fastly.net/
     minZoom: 2,
 }).addTo(mymap);
 
+
 var migrationLayer = new L.migrationLayer({
     map: mymap,
-    data: data,
+    data: daneagain,
     pulseRadius:30,
     pulseBorderWidth:3,
     arcWidth:1,
     arcLabel:true,
-    arcLabelFont:'10px sans-serif',
+    arcLabelFont:'10px sana-seriff',
     maxWidth:10
 });
 
-migrationLayer.addTo(mymap);  
+migrationLayer.addTo(mymap);
+ 
 
 var dane_poly = new L.geoJson(dane_poly).addTo(mymap);
 
@@ -36,4 +38,3 @@ function play(){
 function pause(){
     migrationLayer.pause();
 }
-  
